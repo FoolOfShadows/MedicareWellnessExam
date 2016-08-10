@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		794D8FAB1D5A4DF10044CC3C /* IncontinenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D8FAA1D5A4DF10044CC3C /* IncontinenceController.swift */; };
+		794D8FAD1D5A514B0044CC3C /* IncontinenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D8FAC1D5A514B0044CC3C /* IncontinenceModel.swift */; };
+		796A475C1D5279B200765C05 /* PainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A475B1D5279B200765C05 /* PainController.swift */; };
+		796A475E1D5279C700765C05 /* PainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A475D1D5279C700765C05 /* PainModel.swift */; };
 		798482B91D50EF6B0074BE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798482B81D50EF6B0074BE17 /* AppDelegate.swift */; };
 		798482BB1D50EF6B0074BE17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798482BA1D50EF6B0074BE17 /* Assets.xcassets */; };
 		798482BE1D50EF6B0074BE17 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798482BC1D50EF6B0074BE17 /* MainMenu.xib */; };
+		798482C61D50FE940074BE17 /* MWEModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798482C51D50FE940074BE17 /* MWEModel.swift */; };
+		798482C81D50FEA20074BE17 /* MWEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798482C71D50FEA20074BE17 /* MWEController.swift */; };
+		79AED0161D52551E00DBF36B /* PHQ9Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED0151D52551E00DBF36B /* PHQ9Controller.swift */; };
+		79AED0181D52554A00DBF36B /* PHQ9Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED0171D52554A00DBF36B /* PHQ9Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		794D8FAA1D5A4DF10044CC3C /* IncontinenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncontinenceController.swift; sourceTree = "<group>"; };
+		794D8FAC1D5A514B0044CC3C /* IncontinenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncontinenceModel.swift; sourceTree = "<group>"; };
+		796A475B1D5279B200765C05 /* PainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainController.swift; sourceTree = "<group>"; };
+		796A475D1D5279C700765C05 /* PainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainModel.swift; sourceTree = "<group>"; };
 		798482B51D50EF6B0074BE17 /* Medicare Wellness Exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medicare Wellness Exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		798482B81D50EF6B0074BE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		798482BA1D50EF6B0074BE17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		798482BD1D50EF6B0074BE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		798482BF1D50EF6B0074BE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		798482C51D50FE940074BE17 /* MWEModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWEModel.swift; sourceTree = "<group>"; };
+		798482C71D50FEA20074BE17 /* MWEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWEController.swift; sourceTree = "<group>"; };
+		79AED0151D52551E00DBF36B /* PHQ9Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQ9Controller.swift; sourceTree = "<group>"; };
+		79AED0171D52554A00DBF36B /* PHQ9Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQ9Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,14 @@
 				798482BA1D50EF6B0074BE17 /* Assets.xcassets */,
 				798482BC1D50EF6B0074BE17 /* MainMenu.xib */,
 				798482BF1D50EF6B0074BE17 /* Info.plist */,
+				798482C51D50FE940074BE17 /* MWEModel.swift */,
+				798482C71D50FEA20074BE17 /* MWEController.swift */,
+				79AED0151D52551E00DBF36B /* PHQ9Controller.swift */,
+				79AED0171D52554A00DBF36B /* PHQ9Model.swift */,
+				796A475B1D5279B200765C05 /* PainController.swift */,
+				796A475D1D5279C700765C05 /* PainModel.swift */,
+				794D8FAA1D5A4DF10044CC3C /* IncontinenceController.swift */,
+				794D8FAC1D5A514B0044CC3C /* IncontinenceModel.swift */,
 			);
 			path = "Medicare Wellness Exam";
 			sourceTree = "<group>";
@@ -131,7 +155,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794D8FAB1D5A4DF10044CC3C /* IncontinenceController.swift in Sources */,
 				798482B91D50EF6B0074BE17 /* AppDelegate.swift in Sources */,
+				79AED0161D52551E00DBF36B /* PHQ9Controller.swift in Sources */,
+				798482C61D50FE940074BE17 /* MWEModel.swift in Sources */,
+				794D8FAD1D5A514B0044CC3C /* IncontinenceModel.swift in Sources */,
+				79AED0181D52554A00DBF36B /* PHQ9Model.swift in Sources */,
+				798482C81D50FEA20074BE17 /* MWEController.swift in Sources */,
+				796A475E1D5279C700765C05 /* PainModel.swift in Sources */,
+				796A475C1D5279B200765C05 /* PainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +312,7 @@
 				798482C41D50EF6B0074BE17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
