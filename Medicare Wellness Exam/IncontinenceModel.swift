@@ -49,3 +49,4 @@ func processQuestion(question: Question, answers: [NSButton], bothered: [NSButto
 	
 	return results
 }
+

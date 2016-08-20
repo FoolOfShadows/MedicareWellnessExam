@@ -203,7 +203,7 @@ class PHQ9Controller: NSView {
 	}
 	
 	@IBAction func takeProcess(_ sender: NSButton) {
-		var finalResult = "The patient's PHG-9 score is: \(totalView.stringValue)"
+		var finalResult = "The patient's PHQ-9 score is: \(totalView.stringValue)"
 		let bigArray:[(QuestionsAndAnswers, [NSButton])] = [(.LittleInterest, littleInterestCheckboxArray), (.FeelingDown, feelingDownCheckboxArray), (.TroubleSleeping, troubleSleepingCheckboxArray), (.FeelingTired, feelingTiredCheckboxArray), (.PoorAppetite, poorAppetiteCheckboxArray), (.FeelingBadAboutSelf, feelingBadAboutSelfCheckboxArray), (.TroubleConcentrating, troubleConcentratingCheckboxArray), (.SpeakingSlowly, speakingSlowlyCheckboxArray), (.BetterOffDead, betterOffDeadCheckboxArray)]
 		
 		let resultBigArray = proccessBigArray(bigArray: bigArray)
@@ -233,6 +233,7 @@ class PHQ9Controller: NSView {
 		setCheckboxesToOff(checkBoxes: speakingSlowlyCheckboxArray)
 		setCheckboxesToOff(checkBoxes: betterOffDeadCheckboxArray)
 		setCheckboxesToOff(checkBoxes: howDifficultArray)
+		totalView.stringValue = String()
 	}
 	
 }

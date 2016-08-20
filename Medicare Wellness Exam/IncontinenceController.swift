@@ -68,7 +68,7 @@ class IncontinenceController: NSView {
 		resultsArray.append(processQuestion(question: .Leak, answers: leakArray, bothered: leakBotherArray))
 		
 		if !resultsArray.isEmpty && resultsArray != ["","","",""] {
-			results = "Patient reports:\n" + resultsArray.joined(separator: "\n")
+			results = "Urinary incontinence screening.  Patient reports:\n" + resultsArray.joined(separator: "\n")
 		}
 		
 		let pasteBoard = NSPasteboard.general()

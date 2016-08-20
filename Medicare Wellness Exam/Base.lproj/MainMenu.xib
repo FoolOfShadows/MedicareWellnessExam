@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11129.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11198.2"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
@@ -21,13 +21,18 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="Ghm-ir-Epm" userLabel="MainController" customClass="MWEController" customModule="Medicare_Wellness_Exam" customModuleProvider="target">
             <connections>
+                <outlet property="adDirAgreesCheckbox" destination="a7m-gf-eWL" id="Mfo-qm-mpD"/>
+                <outlet property="adDirDisagreesCheckbox" destination="pRr-b1-ehL" id="crT-pv-er1"/>
+                <outlet property="adDirDoesNotWantCheckbox" destination="Nrp-Mt-LX0" id="VTI-ir-mCQ"/>
+                <outlet property="adDirNotSureCheckbox" destination="juB-YQ-EIc" id="IK9-BH-wwQ"/>
+                <outlet property="adDirWantsCheckbox" destination="jWS-Ax-N8Z" id="sis-xS-l6S"/>
                 <outlet property="caregiverInputView" destination="ROW-9S-3Je" id="k0M-ca-10B"/>
-                <outlet property="contactsView" destination="LPH-45-347" id="0tL-rW-zSW"/>
+                <outlet property="contactsView" destination="fK5-hL-Psq" id="7tk-3A-jnf"/>
                 <outlet property="depressedNoCheckbox" destination="Q7y-af-LT6" id="Az6-M6-suF"/>
                 <outlet property="depressedYesCheckbox" destination="Sxp-Oh-fJ1" id="3iD-TE-wPf"/>
                 <outlet property="getUpAndGoNoCheckbox" destination="xlf-I4-Tws" id="Kqj-Eg-JFQ"/>
                 <outlet property="getUpAndGoYesCheckbox" destination="1Xh-9P-PHt" id="MqA-yU-Keq"/>
-                <outlet property="glassesView" destination="ZUR-n1-pGl" id="KZ4-IM-paL"/>
+                <outlet property="glassesView" destination="kLp-x1-KmG" id="i92-6e-kpa"/>
                 <outlet property="hearingDifficultiesNoCheckbox" destination="oYU-Pm-5M0" id="Wpz-n3-D85"/>
                 <outlet property="hearingDifficultiesYesCheckbox" destination="8yH-2a-Jlm" id="IxR-8u-wKY"/>
                 <outlet property="hearingLeftFailCheckbox" destination="8kK-Tl-67h" id="cwG-6Q-MZy"/>
@@ -38,6 +43,8 @@
                 <outlet property="littleInterestYesCheckbox" destination="WgR-m3-G5V" id="Pss-Hq-ipR"/>
                 <outlet property="rugsNoCheckbox" destination="Xcd-P1-TUY" id="v5G-to-LWI"/>
                 <outlet property="rugsYesCheckbox" destination="xZK-3J-wNe" id="4Gy-S4-NuM"/>
+                <outlet property="smokingCounseling3to10" destination="eac-yZ-3lL" id="CyY-B9-nw8"/>
+                <outlet property="smokingCounselingGreaterThan10" destination="C7B-Cv-X0g" id="2lQ-Gl-Kfc"/>
                 <outlet property="visualAcuityLeftView" destination="kOj-Tc-eL8" id="LKZ-da-Pn6"/>
                 <outlet property="visualAcuityRightView" destination="Tmn-rC-6Ta" id="Xv7-pM-qvj"/>
             </connections>
@@ -87,6 +94,44 @@
                 <outlet property="veryDifficult" destination="BvA-91-R6L" id="ZlA-NX-eA0"/>
             </connections>
         </customObject>
+        <customObject id="0ph-GR-4hP" userLabel="MemoryController" customClass="MemoryController" customModule="Medicare_Wellness_Exam" customModuleProvider="target">
+            <connections>
+                <outlet property="certainMedsNo" destination="NTs-ZI-Ya2" id="1wW-oT-fqc"/>
+                <outlet property="certainMedsYes" destination="JwK-8A-ynu" id="DFL-EX-oc7"/>
+                <outlet property="chronicDiseaseNo" destination="6MO-he-HCC" id="SQ1-Sm-4GM"/>
+                <outlet property="chronicDiseaseYes" destination="vTw-qt-VkA" id="4zJ-ee-QEY"/>
+                <outlet property="coffeeNo" destination="oVr-6Z-o99" id="URv-zI-Gfc"/>
+                <outlet property="coffeeYes" destination="bFP-7i-zq9" id="K5s-7I-c1g"/>
+                <outlet property="drinkNo" destination="6pl-63-CcE" id="Ekx-vS-x5j"/>
+                <outlet property="drinkYes" destination="EGZ-Ac-zRM" id="m7R-aQ-Nak"/>
+                <outlet property="forgettingNamesDontKnow" destination="eS4-x3-p5h" id="P4u-CE-Olx"/>
+                <outlet property="forgettingNamesNo" destination="yEK-vc-oGM" id="11t-TN-WFx"/>
+                <outlet property="forgettingNamesYes" destination="P8m-hd-F59" id="7G6-p6-kvw"/>
+                <outlet property="historyNo" destination="ynb-7C-sq4" id="sRz-Fb-rg3"/>
+                <outlet property="historyYes" destination="AVT-34-Y1R" id="Tgt-oQ-E13"/>
+                <outlet property="memoryALittleBetter" destination="Nzy-gD-EAe" id="HpG-P4-Ebj"/>
+                <outlet property="memoryALittleWorse" destination="nFJ-TS-1CY" id="bfz-Hn-ne0"/>
+                <outlet property="memoryAboutTheSame" destination="wOd-hr-sQr" id="hMe-GF-SAp"/>
+                <outlet property="memoryMuchBetter" destination="gaR-kA-L1G" id="Grv-Qu-Q5y"/>
+                <outlet property="memoryMuchWorse" destination="7G8-fG-DX9" id="FeR-wq-gcN"/>
+                <outlet property="misplacingDontKnow" destination="DZP-tL-6nG" id="dLX-rR-KvC"/>
+                <outlet property="misplacingNo" destination="nDK-4b-BFy" id="naC-vf-ybA"/>
+                <outlet property="misplacingYes" destination="ghQ-AN-Qg4" id="coH-ZT-KJc"/>
+                <outlet property="recentEventsDontKnow" destination="AqZ-c8-48s" id="GNF-zT-39D"/>
+                <outlet property="recentEventsNo" destination="IfP-gO-cAA" id="pVF-Oj-Af7"/>
+                <outlet property="recentEventsYes" destination="Fnt-3F-G3p" id="2ny-mr-I5q"/>
+                <outlet property="rememberingNever" destination="fnh-XE-rJL" id="DvH-uJ-7QB"/>
+                <outlet property="rememberingOften" destination="2G1-Dc-hlU" id="nBw-2e-bef"/>
+                <outlet property="rememberingRarely" destination="DqK-64-6CA" id="VyJ-OQ-6pl"/>
+                <outlet property="rememberingSometimes" destination="dQE-kN-WBn" id="yXG-JE-lTd"/>
+                <outlet property="rememberingVeryOften" destination="fOQ-Cy-hLZ" id="VVh-11-DMh"/>
+                <outlet property="smokeNo" destination="C28-T2-0yz" id="uBq-m0-euH"/>
+                <outlet property="smokeYes" destination="zgc-6J-KtX" id="dKx-re-aaU"/>
+                <outlet property="wordsDontKnow" destination="poA-XI-CcL" id="AGK-vH-pu6"/>
+                <outlet property="wordsNo" destination="idK-RZ-7ll" id="zZZ-JV-cxb"/>
+                <outlet property="wordsYes" destination="c0G-UU-sSk" id="3iF-w4-oed"/>
+            </connections>
+        </customObject>
         <customObject id="UCX-ic-anA" userLabel="PainController" customClass="PainController" customModule="Medicare_Wellness_Exam" customModuleProvider="target">
             <connections>
                 <outlet property="activity" destination="Rkb-uT-zqs" id="Bs3-BU-Xnw"/>
@@ -133,6 +178,53 @@
                 <outlet property="rushNever" destination="btL-ab-cf2" id="HoZ-9V-qIg"/>
                 <outlet property="rushOccasionally" destination="7PK-co-OyG" id="vyb-mh-GUa"/>
                 <outlet property="rushSometimes" destination="VS6-Q3-98r" id="cV2-Bd-MyE"/>
+            </connections>
+        </customObject>
+        <customObject id="eA4-c3-7lJ" userLabel="PreventiveController" customClass="PreventiveController" customModule="Medicare_Wellness_Exam" customModuleProvider="target">
+            <connections>
+                <outlet property="abUSNDNotDue" destination="Ys5-gu-Jdy" id="HZo-5Q-sQT"/>
+                <outlet property="abUSNDTextView" destination="mZR-Eq-XOB" id="2uO-Om-MZD"/>
+                <outlet property="bmdNotDue" destination="ast-ha-xTh" id="v3A-Se-cSV"/>
+                <outlet property="bmdTextView" destination="nOk-T0-A8q" id="6vG-Yd-c6Y"/>
+                <outlet property="cholesterolNotDue" destination="kYk-UO-lGO" id="efb-76-9LO"/>
+                <outlet property="cholesterolTextView" destination="e9Q-Kv-uBq" id="BQg-kK-Xg6"/>
+                <outlet property="clnNotDue" destination="0LZ-0i-kuP" id="vhj-CF-uLj"/>
+                <outlet property="clnTextView" destination="LYH-N7-xbv" id="CMI-X8-WZG"/>
+                <outlet property="diabetesTrainingNotDue" destination="JQc-KH-LUI" id="h5N-aR-pTF"/>
+                <outlet property="diabetesTrainingTextView" destination="e2f-xh-AQL" id="EFE-OI-Uf5"/>
+                <outlet property="dreNotDue" destination="8IP-gf-DrW" id="cdV-dc-xuA"/>
+                <outlet property="dreTextView" destination="5xr-BB-JsE" id="bmd-Tv-HcT"/>
+                <outlet property="enemaNotDue" destination="L0O-3A-mEx" id="d7M-0d-B5U"/>
+                <outlet property="enemaTextView" destination="CxZ-s8-hax" id="eqK-dK-RZr"/>
+                <outlet property="flexSigNotDue" destination="WI0-ql-p2i" id="vU1-Hc-T32"/>
+                <outlet property="flexSigTextView" destination="vhC-RO-qp4" id="lvQ-62-Xno"/>
+                <outlet property="fluNotDue" destination="3c3-zI-XYQ" id="D5H-Gw-WQZ"/>
+                <outlet property="fluTextView" destination="b8J-oC-7Sl" id="8Ib-DM-h3l"/>
+                <outlet property="glaucomaNotDue" destination="jrb-jH-W2o" id="T9o-iv-1ig"/>
+                <outlet property="glaucomaTextView" destination="1a0-UK-48I" id="duE-cI-KUA"/>
+                <outlet property="glucoseToleranceNotDue" destination="i6Q-Hr-7u6" id="ueN-Pp-qPf"/>
+                <outlet property="glucoseToleranceTextView" destination="10m-4B-fv8" id="tuc-7c-74n"/>
+                <outlet property="guaNotDue" destination="uts-r7-8P8" id="0SG-g9-Llz"/>
+                <outlet property="guaTextView" destination="saS-Wg-kKp" id="AIQ-ns-1OM"/>
+                <outlet property="hdlNotDue" destination="4it-5Y-HzC" id="ZtP-bc-1Zv"/>
+                <outlet property="hdlTextView" destination="YSc-6R-GmQ" id="cWk-zc-ae6"/>
+                <outlet property="hepBNotDue" destination="718-vD-W5J" id="iat-lC-arF"/>
+                <outlet property="hepBTextView" destination="oLn-oT-azV" id="80f-BF-N1m"/>
+                <outlet property="hivNotDue" destination="iCV-bY-ZDB" id="QbR-IV-cCg"/>
+                <outlet property="hivTextView" destination="vFb-61-xLC" id="JvY-HQ-gMu"/>
+                <outlet property="mamNotDue" destination="kfM-JZ-FA0" id="sLX-Au-uc9"/>
+                <outlet property="mamTextView" destination="NGd-Ak-4zU" id="JQj-C3-Nwz"/>
+                <outlet property="nextMWVTextView" destination="c94-Js-PEz" id="HbU-Is-47R"/>
+                <outlet property="nutritionTherapyNotDue" destination="33H-kv-Pcc" id="5Z5-8F-fLT"/>
+                <outlet property="nutritionTherapyTextView" destination="Hae-Vc-ntp" id="sjY-dg-mos"/>
+                <outlet property="papNotDue" destination="QTw-Eq-Bvj" id="DUA-fy-4Ts"/>
+                <outlet property="papTextView" destination="r7R-oa-Wwh" id="OFC-nm-XOF"/>
+                <outlet property="pnvNotDue" destination="g80-35-Hg1" id="0yP-4L-Prn"/>
+                <outlet property="pnvTextView" destination="2KI-My-pIJ" id="qbP-7U-A4L"/>
+                <outlet property="psaNotDue" destination="c6A-Cr-pIe" id="8WG-r8-Xye"/>
+                <outlet property="psaTextView" destination="f9P-sI-TM8" id="OCB-no-Ifl"/>
+                <outlet property="triglyceridesNotDue" destination="SSN-fK-Z45" id="w5v-ph-TaC"/>
+                <outlet property="triglyceridesTextView" destination="G7V-Ct-znB" id="lYK-Uq-Enr"/>
             </connections>
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
@@ -800,7 +892,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Main" identifier="1" id="7Ph-MN-65x">
-                                <view key="view" ambiguous="YES" id="VhS-cO-kn2">
+                                <view key="view" id="VhS-cO-kn2">
                                     <rect key="frame" x="10" y="33" width="982" height="691"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1158,24 +1250,22 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9o-4q-4kR">
-                                            <rect key="frame" x="39" y="103" width="292" height="17"/>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eac-yZ-3lL">
+                                            <rect key="frame" x="27" y="104" width="310" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Counseling greater than 3 and up to 10 minutes" id="WyS-t0-fA6">
+                                            <buttonCell key="cell" type="check" title="Counseling greater than 3 and up to 10 minutes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="J6W-4e-qaA">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4G-wI-Xhx">
-                                            <rect key="frame" x="39" y="78" width="219" height="17"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-Cv-X0g">
+                                            <rect key="frame" x="27" y="84" width="237" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Counseling greater than 10 minutes" id="j9r-6K-Q7P">
+                                            <buttonCell key="cell" type="check" title="Counseling greater than 10 minutes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="okb-Sw-nuF">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
+                                            </buttonCell>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -1938,7 +2028,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Memory" identifier="" id="NPd-Kq-DSk">
-                                <view key="view" id="gZx-mo-jcV">
+                                <view key="view" ambiguous="YES" id="gZx-mo-jcV">
                                     <rect key="frame" x="10" y="33" width="982" height="691"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -2073,19 +2163,17 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-5I-tXY">
-                                                    <rect key="frame" x="-2" y="279" width="317" height="17"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Is there a family history of sever memory problems?" id="EMz-FM-geK">
+                                                    <rect key="frame" x="-2" y="279" width="324" height="17"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Is there a family history of severe memory problems?" id="EMz-FM-geK">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k9U-Y1-HEe">
-                                                    <rect key="frame" x="-2" y="230" width="397" height="34"/>
-                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="hop-E0-k2q">
+                                                    <rect key="frame" x="-2" y="230" width="349" height="34"/>
+                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Do you currently smoke, or have you in a lifetime smoked greater than 20 cigarettes/day for 20 years?" id="hop-E0-k2q">
                                                         <font key="font" metaFont="system"/>
-                                                        <string key="title">Do you currently smoke, or have you in a lifetime somked greater
-than 20 cigarettes/day for 20 years?</string>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -2562,6 +2650,9 @@ absorption of folate?</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="takeProcessMemory:" target="0ph-GR-4hP" id="Bas-hF-r0O"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-FZ-9Q0">
                                             <rect key="frame" x="439" y="10" width="72" height="32"/>
@@ -2570,6 +2661,9 @@ absorption of folate?</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="takeClearMemory:" target="0ph-GR-4hP" id="on4-XM-kPx"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -3659,7 +3753,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voB-Dj-xXR">
-                                            <rect key="frame" x="15" y="478" width="216" height="17"/>
+                                            <rect key="frame" x="15" y="538" width="216" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mammogram (biennial from 50-74)" id="S62-G5-0bR">
                                                 <font key="font" metaFont="system"/>
@@ -3668,7 +3762,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bj2-DG-8PV">
-                                            <rect key="frame" x="15" y="429" width="323" height="17"/>
+                                            <rect key="frame" x="15" y="489" width="323" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PAP (Every 24 months up to age 70 except high risk)" id="zXh-No-pdA">
                                                 <font key="font" metaFont="system"/>
@@ -3677,7 +3771,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5Z-s5-j0q">
-                                            <rect key="frame" x="15" y="362" width="30" height="17"/>
+                                            <rect key="frame" x="15" y="422" width="30" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DRE" id="CZO-8g-aUT">
                                                 <font key="font" metaFont="system"/>
@@ -3686,7 +3780,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7A-nD-3KM">
-                                            <rect key="frame" x="15" y="332" width="30" height="17"/>
+                                            <rect key="frame" x="15" y="392" width="30" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PSA" id="QuX-I3-hTe">
                                                 <font key="font" metaFont="system"/>
@@ -3695,7 +3789,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytm-IR-YRl">
-                                            <rect key="frame" x="15" y="302" width="95" height="17"/>
+                                            <rect key="frame" x="15" y="362" width="95" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="GUA (annually)" id="Lih-hO-vnu">
                                                 <font key="font" metaFont="system"/>
@@ -3704,7 +3798,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o4d-2z-YYZ">
-                                            <rect key="frame" x="15" y="272" width="146" height="17"/>
+                                            <rect key="frame" x="15" y="332" width="146" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Flex Sig (Every 5 years)" id="iOm-is-aM9">
                                                 <font key="font" metaFont="system"/>
@@ -3713,7 +3807,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBJ-Xa-H0Q">
-                                            <rect key="frame" x="15" y="223" width="195" height="17"/>
+                                            <rect key="frame" x="15" y="283" width="195" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Screening CLN (Every 10 years)" id="xhU-LJ-WH3">
                                                 <font key="font" metaFont="system"/>
@@ -3722,7 +3816,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfX-Br-Q26">
-                                            <rect key="frame" x="15" y="174" width="91" height="17"/>
+                                            <rect key="frame" x="15" y="234" width="91" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Barium enema" id="jOg-OG-lcB">
                                                 <font key="font" metaFont="system"/>
@@ -3731,7 +3825,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFz-Vh-0Hs">
-                                            <rect key="frame" x="15" y="144" width="217" height="17"/>
+                                            <rect key="frame" x="15" y="204" width="217" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Diabetes self-management training" id="lOV-UP-8OE">
                                                 <font key="font" metaFont="system"/>
@@ -3740,7 +3834,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-iJ-IIM">
-                                            <rect key="frame" x="15" y="589" width="122" height="17"/>
+                                            <rect key="frame" x="15" y="618" width="122" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Influenza (annually)" id="2Qt-VC-6Rc">
                                                 <font key="font" metaFont="system"/>
@@ -3749,7 +3843,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyK-Xe-bLn">
-                                            <rect key="frame" x="15" y="533" width="199" height="17"/>
+                                            <rect key="frame" x="15" y="587" width="199" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hepatitis B (if medium/high risk)" id="AQA-YW-AyI">
                                                 <font key="font" metaFont="system"/>
@@ -3758,7 +3852,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-6y-M2H">
-                                            <rect key="frame" x="15" y="95" width="253" height="17"/>
+                                            <rect key="frame" x="15" y="155" width="253" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BMD (Biennial for pts w/Osteoporosis dx)" id="8MQ-BH-GL3">
                                                 <font key="font" metaFont="system"/>
@@ -3767,117 +3861,9 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0Y-pp-qxb">
-                                            <rect key="frame" x="503" y="669" width="128" height="17"/>
+                                            <rect key="frame" x="15" y="106" width="128" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Glaucoma screening" id="tLk-fR-AiQ">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaQ-Y0-fQN">
-                                            <rect key="frame" x="503" y="620" width="300" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Medical nutrition therapy for DM or renal disease" id="8wP-se-9Si">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-bC-HKA">
-                                            <rect key="frame" x="526" y="548" width="105" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Total cholesterol" id="ZDe-3k-22w">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzL-fm-juu">
-                                            <rect key="frame" x="526" y="523" width="31" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HDL" id="dj4-n1-IMu">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S78-y7-a1O">
-                                            <rect key="frame" x="526" y="498" width="83" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Triglycerides" id="WJ5-Dg-rO4">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x16-kR-Pgz">
-                                            <rect key="frame" x="503" y="573" width="452" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cardiovascular screening blood tests (every 5 years preferably as a panel)" id="0gf-9Q-pjl">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-dT-xER">
-                                            <rect key="frame" x="503" y="398" width="279" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Abdominal Aortic Aneurysm Screening (once)" id="QGI-IP-rRE">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cfo-jp-iRa">
-                                            <rect key="frame" x="527" y="373" width="66" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sonogram" id="Kol-lI-lxp">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j50-SN-5qC">
-                                            <rect key="frame" x="503" y="345" width="284" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HIV Screening (annually for increased risk pts)" id="QBB-7k-wXX">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vG-ZG-dFG">
-                                            <rect key="frame" x="527" y="320" width="102" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HIV-1 and HIV-2" id="lwr-vj-Q49">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5y-ZR-5Pg">
-                                            <rect key="frame" x="503" y="292" width="423" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Subsequent annual wellness visit (12 months + 1 day since last MWV)" id="Zc4-Mx-eL1">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sx2-be-Dva">
-                                            <rect key="frame" x="527" y="445" width="278" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Fasting blood sugar or glucose tolerance test" id="9gm-5e-H6W">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-pO-kh0">
-                                            <rect key="frame" x="503" y="470" width="301" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Diabetes screenting tests (at least every 3 years)" id="Z4x-nH-aZm">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -3893,7 +3879,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8J-oC-7Sl">
-                                            <rect key="frame" x="143" y="586" width="154" height="22"/>
+                                            <rect key="frame" x="143" y="615" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mzH-eZ-q05">
                                                 <font key="font" metaFont="system"/>
@@ -3902,7 +3888,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLn-oT-azV">
-                                            <rect key="frame" x="220" y="531" width="154" height="22"/>
+                                            <rect key="frame" x="220" y="585" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dsR-bH-pBK">
                                                 <font key="font" metaFont="system"/>
@@ -3911,7 +3897,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-Ak-4zU">
-                                            <rect key="frame" x="237" y="475" width="154" height="22"/>
+                                            <rect key="frame" x="237" y="535" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="DeT-TE-v90">
                                                 <font key="font" metaFont="system"/>
@@ -3920,7 +3906,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saS-Wg-kKp">
-                                            <rect key="frame" x="116" y="299" width="154" height="22"/>
+                                            <rect key="frame" x="116" y="359" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Eyi-zb-Tlo">
                                                 <font key="font" metaFont="system"/>
@@ -3929,7 +3915,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhC-RO-qp4">
-                                            <rect key="frame" x="167" y="269" width="154" height="22"/>
+                                            <rect key="frame" x="167" y="329" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="asw-51-XiJ">
                                                 <font key="font" metaFont="system"/>
@@ -3938,7 +3924,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xr-BB-JsE">
-                                            <rect key="frame" x="51" y="359" width="154" height="22"/>
+                                            <rect key="frame" x="51" y="419" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LMu-EE-Tso">
                                                 <font key="font" metaFont="system"/>
@@ -3947,7 +3933,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7R-oa-Wwh">
-                                            <rect key="frame" x="29" y="399" width="154" height="22"/>
+                                            <rect key="frame" x="29" y="459" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="AqK-dU-nFk">
                                                 <font key="font" metaFont="system"/>
@@ -3956,7 +3942,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9P-sI-TM8">
-                                            <rect key="frame" x="52" y="329" width="154" height="22"/>
+                                            <rect key="frame" x="52" y="389" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="KeQ-jO-K2v">
                                                 <font key="font" metaFont="system"/>
@@ -3965,7 +3951,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1a0-UK-48I">
-                                            <rect key="frame" x="637" y="666" width="154" height="22"/>
+                                            <rect key="frame" x="149" y="103" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Ebb-V6-cYw">
                                                 <font key="font" metaFont="system"/>
@@ -3973,17 +3959,8 @@ absorption of folate?</string>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-Vc-ntp">
-                                            <rect key="frame" x="809" y="618" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2T6-bL-XEP">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2f-xh-AQL">
-                                            <rect key="frame" x="238" y="141" width="154" height="22"/>
+                                            <rect key="frame" x="238" y="201" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="tw9-LC-qAK">
                                                 <font key="font" metaFont="system"/>
@@ -3992,7 +3969,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-T0-A8q">
-                                            <rect key="frame" x="275" y="92" width="154" height="22"/>
+                                            <rect key="frame" x="275" y="152" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="xeF-K8-eCO">
                                                 <font key="font" metaFont="system"/>
@@ -4001,7 +3978,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYH-N7-xbv">
-                                            <rect key="frame" x="216" y="220" width="154" height="22"/>
+                                            <rect key="frame" x="216" y="280" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JZf-Wo-At6">
                                                 <font key="font" metaFont="system"/>
@@ -4010,7 +3987,7 @@ absorption of folate?</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxZ-s8-hax">
-                                            <rect key="frame" x="116" y="171" width="154" height="22"/>
+                                            <rect key="frame" x="116" y="231" width="154" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="oZt-e1-qj5">
                                                 <font key="font" metaFont="system"/>
@@ -4018,71 +3995,8 @@ absorption of folate?</string>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-Kv-uBq">
-                                            <rect key="frame" x="637" y="545" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="geG-9F-BoY">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-6R-GmQ">
-                                            <rect key="frame" x="563" y="521" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="PEV-sP-JB8">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7V-Ct-znB">
-                                            <rect key="frame" x="615" y="495" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="T7z-L3-yV4">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10m-4B-fv8">
-                                            <rect key="frame" x="811" y="442" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="TDW-Hs-lII">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-Eq-XOB">
-                                            <rect key="frame" x="599" y="370" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bLY-tW-MFX">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFb-61-xLC">
-                                            <rect key="frame" x="637" y="317" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1MO-G4-DP4">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c94-Js-PEz">
-                                            <rect key="frame" x="529" y="264" width="154" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="GNJ-U5-7oK">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g80-35-Hg1">
-                                            <rect key="frame" x="27" y="622" width="71" height="18"/>
+                                            <rect key="frame" x="368" y="648" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mRn-Hl-vh3">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4090,7 +4004,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3c3-zI-XYQ">
-                                            <rect key="frame" x="27" y="565" width="71" height="18"/>
+                                            <rect key="frame" x="301" y="617" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="gGb-Bt-TPF">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4098,7 +4012,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="718-vD-W5J">
-                                            <rect key="frame" x="27" y="509" width="71" height="18"/>
+                                            <rect key="frame" x="27" y="563" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="eUK-22-8ji">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4106,7 +4020,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfM-JZ-FA0">
-                                            <rect key="frame" x="27" y="454" width="71" height="18"/>
+                                            <rect key="frame" x="27" y="514" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="euX-RU-EYP">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4114,7 +4028,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTw-Eq-Bvj">
-                                            <rect key="frame" x="201" y="401" width="71" height="18"/>
+                                            <rect key="frame" x="201" y="461" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="CoL-Jy-0Nr">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4122,7 +4036,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IP-gf-DrW">
-                                            <rect key="frame" x="218" y="361" width="71" height="18"/>
+                                            <rect key="frame" x="218" y="421" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="noQ-4k-0Jg">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4130,63 +4044,23 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c6A-Cr-pIe">
-                                            <rect key="frame" x="218" y="331" width="71" height="18"/>
+                                            <rect key="frame" x="218" y="391" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="goc-e5-exz">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6Q-Hr-7u6">
-                                            <rect key="frame" x="527" y="421" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ogg-c8-pWG">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uts-r7-8P8">
-                                            <rect key="frame" x="280" y="301" width="71" height="18"/>
+                                            <rect key="frame" x="280" y="361" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="roa-nv-Rsz">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kYk-UO-lGO">
-                                            <rect key="frame" x="797" y="547" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kSV-NI-rnG">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4it-5Y-HzC">
-                                            <rect key="frame" x="722" y="523" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="q0e-rE-whZ">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSN-fK-Z45">
-                                            <rect key="frame" x="775" y="497" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4St-8h-snU">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33H-kv-Pcc">
-                                            <rect key="frame" x="515" y="596" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="M7v-15-xws">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrb-jH-W2o">
-                                            <rect key="frame" x="797" y="668" width="71" height="18"/>
+                                            <rect key="frame" x="309" y="105" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="uMJ-kK-9Jx">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4194,7 +4068,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LZ-0i-kuP">
-                                            <rect key="frame" x="27" y="199" width="71" height="18"/>
+                                            <rect key="frame" x="27" y="259" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2bA-qd-fKx">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4202,7 +4076,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0O-3A-mEx">
-                                            <rect key="frame" x="276" y="172" width="71" height="18"/>
+                                            <rect key="frame" x="276" y="232" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="CdU-OA-E7W">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4210,7 +4084,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQc-KH-LUI">
-                                            <rect key="frame" x="27" y="120" width="71" height="18"/>
+                                            <rect key="frame" x="27" y="180" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="30V-8w-dWf">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4218,7 +4092,7 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ast-ha-xTh">
-                                            <rect key="frame" x="27" y="71" width="71" height="18"/>
+                                            <rect key="frame" x="27" y="131" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zr1-4y-OoY">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4226,25 +4100,9 @@ absorption of folate?</string>
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-ql-p2i">
-                                            <rect key="frame" x="27" y="248" width="71" height="18"/>
+                                            <rect key="frame" x="27" y="308" width="71" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="yfV-4e-SrS">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCV-bY-ZDB">
-                                            <rect key="frame" x="809" y="319" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="plh-zW-orj">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-gu-Jdy">
-                                            <rect key="frame" x="764" y="372" width="71" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Oyn-nn-h9J">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -4256,14 +4114,267 @@ absorption of folate?</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="processPreventiveMeasures:" target="eA4-c3-7lJ" id="iTH-Bk-Mv1"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zX0-Hn-DrU">
+                                            <rect key="frame" x="801" y="10" width="69" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Print" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NyV-bS-KwW">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="printPreventiveMeasures:" target="eA4-c3-7lJ" id="pSz-4l-gtr"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaQ-Y0-fQN">
+                                            <rect key="frame" x="503" y="649" width="300" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Medical nutrition therapy for DM or renal disease" id="8wP-se-9Si">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-bC-HKA">
+                                            <rect key="frame" x="526" y="577" width="105" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Total cholesterol" id="ZDe-3k-22w">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzL-fm-juu">
+                                            <rect key="frame" x="526" y="552" width="31" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HDL" id="dj4-n1-IMu">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S78-y7-a1O">
+                                            <rect key="frame" x="526" y="527" width="83" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Triglycerides" id="WJ5-Dg-rO4">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x16-kR-Pgz">
+                                            <rect key="frame" x="503" y="602" width="452" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cardiovascular screening blood tests (every 5 years preferably as a panel)" id="0gf-9Q-pjl">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-dT-xER">
+                                            <rect key="frame" x="503" y="427" width="279" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Abdominal Aortic Aneurysm Screening (once)" id="QGI-IP-rRE">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cfo-jp-iRa">
+                                            <rect key="frame" x="527" y="402" width="66" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sonogram" id="Kol-lI-lxp">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j50-SN-5qC">
+                                            <rect key="frame" x="503" y="374" width="284" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HIV Screening (annually for increased risk pts)" id="QBB-7k-wXX">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vG-ZG-dFG">
+                                            <rect key="frame" x="527" y="349" width="102" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HIV-1 and HIV-2" id="lwr-vj-Q49">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5y-ZR-5Pg">
+                                            <rect key="frame" x="503" y="321" width="423" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Subsequent annual wellness visit (12 months + 1 day since last MWV)" id="Zc4-Mx-eL1">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sx2-be-Dva">
+                                            <rect key="frame" x="527" y="474" width="278" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Fasting blood sugar or glucose tolerance test" id="9gm-5e-H6W">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-pO-kh0">
+                                            <rect key="frame" x="503" y="499" width="301" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Diabetes screenting tests (at least every 3 years)" id="Z4x-nH-aZm">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-Vc-ntp">
+                                            <rect key="frame" x="809" y="647" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2T6-bL-XEP">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-Kv-uBq">
+                                            <rect key="frame" x="637" y="574" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="geG-9F-BoY">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-6R-GmQ">
+                                            <rect key="frame" x="563" y="550" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="PEV-sP-JB8">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7V-Ct-znB">
+                                            <rect key="frame" x="615" y="524" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="T7z-L3-yV4">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10m-4B-fv8">
+                                            <rect key="frame" x="811" y="471" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="TDW-Hs-lII">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-Eq-XOB">
+                                            <rect key="frame" x="599" y="399" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bLY-tW-MFX">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFb-61-xLC">
+                                            <rect key="frame" x="637" y="346" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1MO-G4-DP4">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c94-Js-PEz">
+                                            <rect key="frame" x="529" y="293" width="154" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="GNJ-U5-7oK">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6Q-Hr-7u6">
+                                            <rect key="frame" x="527" y="450" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ogg-c8-pWG">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kYk-UO-lGO">
+                                            <rect key="frame" x="797" y="576" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kSV-NI-rnG">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4it-5Y-HzC">
+                                            <rect key="frame" x="722" y="552" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="q0e-rE-whZ">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSN-fK-Z45">
+                                            <rect key="frame" x="775" y="526" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4St-8h-snU">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33H-kv-Pcc">
+                                            <rect key="frame" x="515" y="625" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="M7v-15-xws">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCV-bY-ZDB">
+                                            <rect key="frame" x="809" y="348" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="plh-zW-orj">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-gu-Jdy">
+                                            <rect key="frame" x="764" y="401" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Not due" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Oyn-nn-h9J">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fav-aM-nAN">
-                                            <rect key="frame" x="798" y="10" width="72" height="32"/>
+                                            <rect key="frame" x="729" y="10" width="72" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WS8-8Q-kaf">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="processClear:" target="eA4-c3-7lJ" id="bTv-wN-bZo"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>

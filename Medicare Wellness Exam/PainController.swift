@@ -51,14 +51,14 @@ class PainController: NSViewController, NSTextFieldDelegate, NSTextDelegate {
 	}
 	
 	func calculatePEGScore() {
-		if let weeklyValue = Double(averageWeeklyPain.stringValue), enjoymentValue = Double(enjoyment.stringValue), activityValue = Double(activity.stringValue) {
+		if let weeklyValue = Double(averageWeeklyPain.stringValue), let enjoymentValue = Double(enjoyment.stringValue), let activityValue = Double(activity.stringValue) {
 			let totalSum:Double = weeklyValue + enjoymentValue + activityValue
 			pegScore.stringValue = String(format: "%.1f", totalSum/3) + "/10"
 		}
 	}
 	
 	@IBAction func takeProcess(_ sender: NSButton) {
-		let finalResult = "Patient's PEG score is \(pegScore.stringValue)"
+		let finalResult = "Patient's PEG pain score is (\(averageWeeklyPain.stringValue) + \(enjoyment.stringValue) + \(activity.stringValue))/3 = \(pegScore.stringValue)"
 		let pasteBoard = NSPasteboard.general()
 		pasteBoard.clearContents()
 		pasteBoard.setString(finalResult, forType: NSPasteboardTypeString)
@@ -66,6 +66,10 @@ class PainController: NSViewController, NSTextFieldDelegate, NSTextDelegate {
 	}
 	
 	@IBAction func takeClear(_ sender: NSButton) {
+		averageWeeklyPain.stringValue = String()
+		enjoyment.stringValue = String()
+		activity.stringValue = String()
+		pegScore.stringValue = String()
 	}
 	
 }

@@ -28,7 +28,7 @@ enum QuestionsAndAnswers {
 		case .PoorAppetite: return "Poor appetite or overeating"
 		case .FeelingBadAboutSelf: return "Feeling bad about themselves"
 		case .TroubleConcentrating: return "Trouble concentrating"
-		case .SpeakingSlowly: return "Moving or speaking slowly, or being figety and restless"
+		case .SpeakingSlowly: return "Moving or speaking slowly, or being fidgety and restless"
 		case .BetterOffDead: return "Thoughts that they would be better off dead or of hurting themselves"
 		}
 	}
