@@ -50,7 +50,7 @@ func processMeasures(measures:[PreventiveMeasure]) -> String {
 	}
 	
 	if !resultArray.isEmpty {
-		resultString = "Suggested preventive meaasures for the coming year:\n\(resultArray.joined(separator: "\n"))"
+		resultString = "Suggested preventive measures for the coming year:\n\(resultArray.joined(separator: "\n"))"
 	}
 	
 	return resultString

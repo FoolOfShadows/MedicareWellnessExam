@@ -9,7 +9,11 @@
 import Cocoa
 
 class PreventiveController: NSView {
-
+	
+	@IBOutlet weak var winPrint: NSWindow!
+	@IBOutlet var printTextView: NSTextView!
+	
+	
 	@IBOutlet weak var pnvTextView: NSTextField!
 	@IBOutlet weak var pnvNotDue: NSButton!
 	@IBOutlet weak var fluTextView: NSTextField!
@@ -53,6 +57,9 @@ class PreventiveController: NSView {
 	@IBOutlet weak var hivTextView: NSTextField!
 	@IBOutlet weak var hivNotDue: NSButton!
 	@IBOutlet weak var nextMWVTextView: NSTextField!
+	
+	@IBOutlet weak var ptNameView: NSTextField!
+	@IBOutlet weak var ptDOBView: NSTextField!
 	
 	var measures = [PreventiveMeasure]()
  
@@ -105,8 +112,40 @@ class PreventiveController: NSView {
 	@IBAction func processClear(_ sender: AnyObject) {
 		processClearMeasures(measures: measures)
 		nextMWVTextView.stringValue = String()
+		ptNameView.stringValue = String()
+		ptDOBView.stringValue = String()
 	}
-	@IBAction func printPreventiveMeasures(_ sender: NSButton) {
-		let results = prepareMeasures()
+
+	
+	
+	@IBAction func takePrintMeasures(_ sender: AnyObject) {
+		var results = prepareMeasures()
+		if !results.isEmpty {
+			let pasteBoard = NSPasteboard.general()
+			pasteBoard.clearContents()
+			pasteBoard.setString(results, forType: NSPasteboardTypeString)
+			Swift.print(results)
+		}
+		
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "MM/dd/YYYY"
+		let currentDate = dateFormatter.string(from: Date())
+		
+		results = "Visit Date:\(currentDate)\n\n\(ptNameView.stringValue.capitalized) (\(ptDOBView.stringValue))\n\n\(results)"
+		
+		self.printTextView.string = results
+		self.printTextView.textStorage?.font = NSFont(name: "Times New Roman", size: 14)
+
+		
+		let myPrintInfo = NSPrintInfo.shared()
+
+		myPrintInfo.leftMargin = 0
+		myPrintInfo.rightMargin = 0
+		myPrintInfo.topMargin = 0
+		myPrintInfo.bottomMargin = 0
+	
+		let myPrintOperation = NSPrintOperation(view: self.printTextView, printInfo: myPrintInfo)
+		myPrintOperation.run()
 	}
+	
 }
