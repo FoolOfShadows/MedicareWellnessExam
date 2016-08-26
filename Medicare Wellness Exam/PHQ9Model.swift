@@ -8,30 +8,16 @@
 
 import Cocoa
 
-enum QuestionsAndAnswers {
-	case LittleInterest
-	case FeelingDown
-	case TroubleSleeping
-	case FeelingTired
-	case PoorAppetite
-	case FeelingBadAboutSelf
-	case TroubleConcentrating
-	case SpeakingSlowly
-	case BetterOffDead
-	
-	var theAnswer: String {
-		switch self {
-		case .LittleInterest: return "Little interest or pleasure in doing things"
-		case .FeelingDown: return "Feeling down, depressed, or hopeless"
-		case .TroubleSleeping: return "Trouble falling or staying asleep, or sleeping too much"
-		case .FeelingTired: return "Feeling tired or having little energy"
-		case .PoorAppetite: return "Poor appetite or overeating"
-		case .FeelingBadAboutSelf: return "Feeling bad about themselves"
-		case .TroubleConcentrating: return "Trouble concentrating"
-		case .SpeakingSlowly: return "Moving or speaking slowly, or being fidgety and restless"
-		case .BetterOffDead: return "Thoughts that they would be better off dead or of hurting themselves"
-		}
-	}
+enum QuestionsAndAnswers:String {
+	case LittleInterest = "Little interest or pleasure in doing things"
+	case FeelingDown = "Feeling down, depressed, or hopeless"
+	case TroubleSleeping = "Trouble falling or staying asleep, or sleeping too much"
+	case FeelingTired = "Feeling tired or having little energy"
+	case PoorAppetite = "Poor appetite or overeating"
+	case FeelingBadAboutSelf = "Feeling bad about themselves"
+	case TroubleConcentrating = "Trouble concentrating"
+	case SpeakingSlowly = "Moving or speaking slowly, or being fidgety and restless"
+	case BetterOffDead = "Thoughts that they would be better off dead or of hurting themselves"
 }
 
 enum HowOften:Int {
@@ -62,7 +48,7 @@ func createString(question: QuestionsAndAnswers, checkboxes: [NSButton]) -> Stri
 	
 	if theTag != 0 {
 		if let theFrequency = HowOften(rawValue: theTag) {
-			finalString = "\(question.theAnswer) \(theFrequency.theString)"
+			finalString = "\(question.rawValue) \(theFrequency.theString)"
 			
 		}
 	}

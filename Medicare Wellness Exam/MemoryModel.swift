@@ -15,37 +15,19 @@ enum YesNo:String {
 }
 
 
-enum MemoryQuestions {
-	case Remembering
-	case BetterWorse
-	case ForgettingNames
-	case RecentEvents
-	case Words
-	case Misplacing
-	case History
-	case Smoker
-	case Drinker
-	case Coffee
-	case Disease
-	case Medication
-	
-	var fullQuestion: String {
-		switch self {
-			case .Remembering: return "How often do you have trouble remembering things?"
-			case .BetterWorse: return "Is your memory worse than it was 10 years ago?"
-			case .ForgettingNames: return "Are you forgetting names on a more regular basis?"
-			case .RecentEvents: return "Do you have trouble remember recent events?"
-			case .Words: return "Are you regularly searching for words when speaking to someone?"
-			case .Misplacing: return "Are you misplacing items more often than usual?"
-			case .History: return "Is there a family history of severe memory problems?"
-			case .Smoker: return "Do you currently smoke, or have you in a lifetime smoked greater than 20 cigarettes per day for 20 years?"
-			case .Drinker: return "Do you currently drink greater than 2 alcoholic drinks per day, for a man, or 1 per day for a woman?"
-			case .Coffee: return "Do you drink more than 4 cups of coffee a day?"
-			case .Disease: return "Do you suffer from some chronic diseases such as diabetes, hypothyroidism, atrophic gastric, stomach or intestinal resections, Crohn's, or colitis?"
-			case .Medication: return "Do you take certain drugs, such as antiepileptic drugs, colchicine, metforminmethotrexate, sulphasalazine, L-dopa, fenofibrates, niacin, & NSAIDS, or any PPIs which have been shown to reduce the absorption of folate?"
-		}
-	}
-
+enum MemoryQuestions:String {
+	case Remembering = "How often do you have trouble remembering things?"
+	case BetterWorse = "Is your memory worse than it was 10 years ago?"
+	case ForgettingNames = "Are you forgetting names on a more regular basis?"
+	case RecentEvents = "Do you have trouble remember recent events?"
+	case Words = "Are you regularly searching for words when speaking to someone?"
+	case Misplacing = "Are you misplacing items more often than usual?"
+	case History = "Is there a family history of severe memory problems?"
+	case Smoker = "Do you currently smoke, or have you in a lifetime smoked greater than 20 cigarettes per day for 20 years?"
+	case Drinker = "Do you currently drink greater than 2 alcoholic drinks per day, for a man, or 1 per day for a woman?"
+	case Coffee = "Do you drink more than 4 cups of coffee a day?"
+	case Disease = "Do you suffer from some chronic diseases such as diabetes, hypothyroidism, atrophic gastric, stomach or intestinal resections, Crohn's, or colitis?"
+	case Medication = "Do you take certain drugs, such as antiepileptic drugs, colchicine, metforminmethotrexate, sulphasalazine, L-dopa, fenofibrates, niacin, & NSAIDS, or any PPIs which have been shown to reduce the absorption of folate?"
 }
 
 struct TroubleRemembering {
@@ -62,7 +44,7 @@ struct TroubleRemembering {
 		
 		for selection in selections {
 			if selection.state == NSOnState {
-				results = "\(MemoryQuestions.Remembering.fullQuestion) - \(selection.title)"
+				results = "\(MemoryQuestions.Remembering.rawValue) - \(selection.title)"
 			}
 		}
 		
@@ -90,7 +72,7 @@ struct MemoryWorse {
 		
 		for selection in selections {
 			if selection.state == NSOnState {
-				results = "\(MemoryQuestions.BetterWorse.fullQuestion) - \(selection.title)"
+				results = "\(MemoryQuestions.BetterWorse.rawValue) - \(selection.title)"
 			}
 		}
 		
@@ -118,7 +100,7 @@ struct YesNoQuestion {
 		for selection in selections {
 			if let selection = selection {
 				if selection.state == NSOnState {
-					results = "\(question.fullQuestion) - \(selection.title)"
+					results = "\(question.rawValue) - \(selection.title)"
 				}
 			}
 		}
