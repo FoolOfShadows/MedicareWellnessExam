@@ -8,20 +8,11 @@
 
 import Cocoa
 
-enum Question {
-	case DayFrequency
-	case NightFrequency
-	case Rush
-	case Leak
-	
-	var questionString: String {
-		switch self {
-		case .DayFrequency: return "Daytime urination frequency of "
-		case .NightFrequency: return "Nighttime urination frequency of "
-		case .Rush: return "Needing to rush to the toilet to urinate "
-		case .Leak: return "Urine leaking before getting to the toilet "
-		}
-	}
+enum Question:String {
+	case DayFrequency = "Daytime urination frequency of "
+	case NightFrequency = "Nighttime urination frequency of "
+	case Rush =  "Needing to rush to the toilet to urinate "
+	case Leak =  "Urine leaking before getting to the toilet "
 }
 
 
@@ -32,7 +23,7 @@ func processQuestion(question: Question, answers: [NSButton], bothered: [NSButto
 	
 	for answer in answers {
 		if answer.state == NSOnState {
-			theAnswer = question.questionString + answer.title
+			theAnswer = question.rawValue + answer.title
 		}
 	}
 	for amount in bothered {

@@ -59,7 +59,7 @@ class PreventiveController: NSView {
 	@IBOutlet weak var nextMWVTextView: NSTextField!
 	
 	@IBOutlet weak var ptNameView: NSTextField!
-	@IBOutlet weak var ptDOBView: NSTextField!
+	
 	
 	var measures = [PreventiveMeasure]()
  
@@ -113,7 +113,6 @@ class PreventiveController: NSView {
 		processClearMeasures(measures: measures)
 		nextMWVTextView.stringValue = String()
 		ptNameView.stringValue = String()
-		ptDOBView.stringValue = String()
 	}
 
 	
@@ -131,10 +130,10 @@ class PreventiveController: NSView {
 		dateFormatter.dateFormat = "MM/dd/YYYY"
 		let currentDate = dateFormatter.string(from: Date())
 		
-		results = "Visit Date:\(currentDate)\n\n\(ptNameView.stringValue.capitalized) (\(ptDOBView.stringValue))\n\n\(results)"
+		results = "Medicare Wellness Visit\nVisit Date:\(currentDate)\n\n\(ptNameView.stringValue.capitalized)\n\n\(results)"
 		
 		self.printTextView.string = results
-		self.printTextView.textStorage?.font = NSFont(name: "Times New Roman", size: 14)
+		self.printTextView.textStorage?.font = NSFont(name: "Times New Roman", size: 16)
 
 		
 		let myPrintInfo = NSPrintInfo.shared()
